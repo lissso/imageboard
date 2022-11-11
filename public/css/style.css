@@ -1,0 +1,223 @@
+* {
+    font-family: montserrat;
+}
+body {
+    margin: 0;
+    background-color: white;
+    margin-bottom: 80px;
+}
+
+h1 {
+    font-size: 8em;
+    text-align: center;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 80px;
+}
+
+.wrapper-image {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.wrapper-form {
+    margin-bottom: 40px;
+}
+
+/****************** picture upload form */
+input {
+    color: white;
+    margin: 6px 0;
+    margin-right: 10px;
+    padding: 10px 24px;
+    outline: none;
+}
+input.input-homep {
+    background-color: black;
+    border: 1px solid black;
+}
+
+input#handle-change {
+    padding: 7.5px 2px;
+}
+button {
+    width: 120px;
+    padding: 11px 20px;
+    border: 2px black dotted;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+}
+
+button:hover {
+    color: white;
+    background-color: khaki;
+}
+
+button:focus,
+button.modal:focus {
+    color: darkkhaki;
+    box-shadow: 4px 4px 0 darkkhaki;
+}
+
+button:active,
+button.modal:active {
+    color: khaki;
+    box-shadow: 4px 4px 0 khaki;
+}
+
+button.modal {
+    border: 2px white dotted;
+    background-color: white;
+    color: black;
+}
+
+button.more-button {
+    width: 200px;
+}
+/****************** image board */
+
+.image-board {
+    background-color: black;
+    border: 2px black solid;
+    padding: 18px 20px 30px 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.image-board p {
+    color: white;
+    font-family: monospace;
+    padding: 2px 0;
+}
+
+.image-board:hover,
+.image-board p:hover {
+    background-color: #ebebeb;
+    border: 2px #ebebeb solid;
+    color: black;
+    border-style: dashed;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/****************** image modal */
+
+.overlay {
+    position: relative;
+    background: transparent;
+    position: fixed;
+    left: 0;
+    top: 160px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 1s;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+.close-button {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: right;
+    padding: 10px 20px;
+    color: aliceblue;
+}
+.close-button:hover {
+    color: khaki;
+}
+.close-button:active {
+    color: darkkhaki;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper-modal {
+    display: flex;
+    flex-direction: row;
+}
+.text-container {
+    margin-left: 40px;
+}
+
+img.enlarge {
+    /* position: absolute;
+    left: 200px;
+    top: 20%; */
+    width: 400px;
+    height: 400px;
+}
+
+.user,
+.description {
+    background: transparent;
+    transition: all 1s;
+    color: white;
+}
+
+.line {
+    padding: 1px 40px;
+    background-color: khaki;
+}
+
+.comment-box {
+    padding: 2px;
+}
+
+.comment-box p {
+    line-height: 10px;
+    font-size: 12px;
+    color: #c8c8c8;
+}
+/****************** COMMENTS */
+.comments-template {
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.comments-display {
+    margin-top: 20px;
+    height: 120px;
+    overflow-y: scroll;
+}
+
+.comment-input {
+    display: flex;
+    flex-flow: wrap;
+}
+input.input-modal {
+    border: 1px solid transparent;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    margin-right: 30px;
+}
+
+/****************** responsive */
+
+@media screen and (max-width: 769px) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    .image-board {
+        margin-right: 0px;
+    }
+}
